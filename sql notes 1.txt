@@ -1,0 +1,104 @@
+create table kockh(lastname varchar(50),rollno number(20), subject varchar(50));
+insert all into  kockh values('sattu',12,'CSE320') into kockh values('neymar',10,'MTH101') into kockh values('messi',13,'INT108') select * from dual;
+select * from kocmk INTERSECT select * from kockh;
+select * from kocmk UNION select * from kockh;
+select * from kocmk MINUS select * from kockh;
+select * from kocmk NATURAL JOIN kockh;
+create table hitachi(name varchar(25),rollno number(10),FOREIGN KEY(rollno) REFERENCES kocfk(rollno));
+create table naruto(name varchar(25),rollno number(20),FOREIGN KEY(rollno) REFERENCES kocfk(rollno));
+insert into naruto values('yash',12); 
+select * from naruto;
+insert into kocfk values('madara',15,'CSE202'); 
+select * from kocfk;
+insert into naruto values('obito',15);
+
+
+grant select on kocmk to itachix;
+select * from FIRST.kocmk;
+grant insert on kocmk to itachix;
+insert into FIRST.kocmk values('neymar',15,'CSE320');
+grant delete on kocmk to itachix;
+revoke delete on kocmk from itachix;
+select count(firstname), rollno from kocmk group by rollno;
+select subject AS s from kocfk;
+select k.rollno from kocfk k where k.subject='CSE320';
+select rollno from kocfk k ;
+select sysdate from dual;
+
+create table Person(name varchar(40), id_no number(10), address varchar(50));
+insert into Person values('Ankit', 10000, 'Punjab');
+Select * from Person
+insert all into Person(name, id_no, address)values('udit', 10001, 'Punjab') into Person(name, id_no, address)values('irfan', 10002, 'Punjab')
+Select * from Person
+
+
+
+16 FEB:
+delete from person where id_no=10000
+truncate table kocmr;
+
+
+Select * from Person where id_no=10002 or address='Punjab'
+Select * from Person where id_no=10002 and address='Punjab'
+
+for describe=
+desc person;
+
+
+create table shiva(rollno number(10) primary key,subject char(20),regno varchar(40));
+insert into shiva values(10003,'Eec135','KOCMD');
+select * from shiva
+desc shiva;
+
+
+alter table use for modify the table
+
+create table kocsh(rollno number(10) primary key,subject char(10),regno varchar(10));
+insert into kocsh values(39,'data',12216777);
+select * from kocsh
+desc kocsh;
+alter table kocsh add nameofstudent char(50);
+alter table kocsh drop column rollno;
+alter table kocsh RENAME COLUMN regno to registration;
+alter table kocsh modify registration char(20);
+alter table alter table kocsh RENAME COLUMN regno to registration;
+akocsh modify nameofstudent char(30);
+
+create table Person(name varchar(40), id_no number(10), address varchar(50));
+insert into Person values('Ankit', 10000, 'Punjab');
+Select * from Person
+insert all into Person(name, id_no, address)values('udit', 10001, 'Punjab') into Person(name, id_no, address)values('irfan', 10002, 'Punjab')
+Select * from Person
+
+
+
+16 FEB:
+delete from person where id_no=10000
+truncate table kocmr;
+
+
+Select * from Person where id_no=10002 or address='Punjab'
+Select * from Person where id_no=10002 and address='Punjab'
+
+for describe=
+desc person;
+
+
+create table shiva(rollno number(10) primary key,subject char(20),regno varchar(40));
+insert into shiva values(10003,'Eec135','KOCMD');
+select * from shiva
+desc shiva;
+
+
+alter table use for modify the table
+
+create table kocsh(rollno number(10) primary key,subject char(10),regno varchar(10));
+insert into kocsh values(39,'data',12216777);
+select * from kocsh
+desc kocsh;
+alter table kocsh add nameofstudent char(50);
+alter table kocsh drop column rollno;
+alter table kocsh RENAME COLUMN regno to registration;
+alter table kocsh modify registration char(20);
+alter table alter table kocsh RENAME COLUMN regno to registration;
+akocsh modify nameofstudent char(30);
